@@ -5,11 +5,11 @@ import ast  # For safely evaluating string representations of lists
 import matplotlib.pyplot as plt  # For color mapping
 
 # Load the CSV file
-csv_file = "PointCloud/exp2/table.csv"  # Replace with your actual file path
+csv_file = "exp2/table.csv"  # Replace with your actual file path
 data = pd.read_csv(csv_file, sep=";")  # Use ';' as delimiter
 
 # Load the first point cloud (pointcloud0.ply)
-pointcloud_file = "PointCloud/exp2/lidar/pointcloud0.ply"
+pointcloud_file = "exp2/lidar/pointcloud0.ply"
 pcd = o3d.io.read_point_cloud(pointcloud_file)
 points = np.asarray(pcd.points)
 
